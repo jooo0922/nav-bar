@@ -1,0 +1,98 @@
+:root{
+    --text-color: #f0f4f5;
+    --background-color: #263343;
+    --accent-color: #d49466;
+}
+
+body{
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+    padding: 8px 12px;
+}
+
+.navBarLogo{
+    font-size: 24px;
+    color: var(--text-color);
+}
+
+.navBarLogo i{
+    color: var(--accent-color);
+}
+
+.navBarMenu{
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.navBarMenu li{
+    padding: 8px 12px;
+}
+.navBarMenu li:hover{
+    background-color: var(--accent-color) ;
+    border-radius: 4px;
+}
+.navBarIcons{
+    list-style: none;
+    color: var(--text-color);
+    display: flex;
+    padding-left: 0;
+}
+
+.navBarIcons li{
+    padding: 8px 12px;
+}
+
+.navBarToggle{
+    display: none;
+    position: absolute;
+    right: 32px;
+    font-size: 24px;
+    color:  var(--accent-color);
+}
+
+@media screen and (max-width: 768px){
+    .navBar{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
+    }
+
+    .navBarMenu{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navBarMenu li{
+        width: 100%;
+        text-align: center;
+    }
+
+    .navBarIcons{
+        display: none;
+        justify-content: center;
+        width: 100%;
+    } 
+
+    .navBarToggle{
+        display: block;
+    }
+
+    .navBarMenu.active,
+    .navBarIcons.active{
+        display: flex;
+    }
+}
